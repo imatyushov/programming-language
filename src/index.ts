@@ -1,7 +1,11 @@
 import Lexer from "./Lexer"
 
 
-const code = ''
+const code = 
+`
+    сумма РАВНО 5 МИНУС 9;
+    КОНСОЛЬ СУММА;
+`
 
-const lexer = new Lexer(code)
+const lexer = new Lexer(code);
 lexer.lexicAnalysis();

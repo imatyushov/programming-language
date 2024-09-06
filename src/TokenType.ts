@@ -1,4 +1,3 @@
-
 export default class TokenType {
     name: string;
     regex: string;

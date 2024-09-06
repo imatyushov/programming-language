@@ -11,9 +11,9 @@ export default class Lexer {
     }
 
     lexicAnalysis() {
-        while(this.codeIterator()) {
+        while (this.codeIterator()) {
             this.tokenList = this.tokenList.filter((token) => {
-                token.type.name !== TokenTypeList.SPACE.name
+                token.type.name !== TokenTypeList.SPACE.name;
             })
             return this.tokenList;
         }
@@ -33,7 +33,7 @@ export default class Lexer {
 
             if (result && result[0]) {
                 const token = new Token(tokenTypeValue, result[0], this.position);
-                this.position;
+                this.position += result[0].length;
                 this.tokenList.push(token);
                 return true;
             }
